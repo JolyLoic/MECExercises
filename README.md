@@ -21,7 +21,7 @@ Look at the `BigData` program, and especially at the `BigData` class. What do yo
 
 If the class was supposed to be used in a multithread environment, would you change your answer?
 ## Shape factory, take 2
-Look at the shape factory in the `Factor`y project (it correspond to a solution of an exercise during the Advanced C++ training). This factory is very specific to our use case. Can we make it more generic, and therefore reusable in another context? Write some code to show this.
+Look at the shape factory in the `Factory` project (it correspond to a solution of an exercise during the Advanced C++ training). This factory is very specific to our use case. Can we make it more generic, and therefore reusable in another context? Write some code to show this.
 
 ## Easier map (?)
 We have written the following utility function, to search a value in a map and provide a default if it’s not found:
