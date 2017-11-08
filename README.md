@@ -12,14 +12,16 @@ In a game, many candidates are performing several tests, leading them to having 
 Same questions as the previous exercise.
 ## BlaBlaTrip
 You are asked to implement the following class diagram:
- 
+
+![BlaBlaTrip class diagram](/BlaBlaTrip.png) 
+
 Focus only on the headers and on the data structure (forget all the member functions that would be useful for those classes, but still provide the necessary foundational functions, such as the destructors). Provide one separate header for each color. You code should compile.
 ## “Big” data
-Look at the BigData program, and especially at the BigData class. What do you think of it? Propose some improvements/corrections (assuming the cache mechanism is relevant).
+Look at the `BigData` program, and especially at the `BigData` class. What do you think of it? Propose some improvements/corrections (assuming the cache mechanism is relevant).
 
 If the class was supposed to be used in a multithread environment, would you change your answer?
 ## Shape factory, take 2
-Look at the shape factory in the Factory project (it correspond to a solution of an exercise during the Advanced C++ training). This factory is very specific to our use case. Can we make it more generic, and therefore reusable in another context? Write some code to show this.
+Look at the shape factory in the `Factor`y project (it correspond to a solution of an exercise during the Advanced C++ training). This factory is very specific to our use case. Can we make it more generic, and therefore reusable in another context? Write some code to show this.
 
 ## Easier map (?)
 We have written the following utility function, to search a value in a map and provide a default if it’s not found:
@@ -41,7 +43,7 @@ int main()
 Is this function correct? Is it as efficient as it can be? How would you improve it?
 
 ## Drawing a 3D scene
-Look at the SceneGraph program (focusing on the main function). What do you think of the way this code is written? What are the pros & cons?
+Look at the `SceneGraph` program (focusing on the main function). What do you think of the way this code is written? What are the pros & cons?
 
 Wrap the 3rd party API in a way that makes writing such code more robust.
 ## Pythagoras
@@ -86,27 +88,31 @@ void pythagoras()
 ## Pandemic, the game
 You are assigned on a game project. The main idea behind the game is to simulate the propagation and mutation of diseases, with the goal to destroy mankind. Currently, the game is in early prototype phase, but the lead developer tells you that it might contain some memory leaks.
 
-Your task is to detect then expunge those memory leaks. The source code is in the Pandemic program. There are some extra comments in this code that require action.
+Your task is to detect then expunge those memory leaks. The source code is in the `Pandemic` program. There are some extra comments in this code that require action.
+
 ## Benchmark
 Write the following algorithm (credits after the exercise has been done):
-Generate N random integers, and insert them in a sequence so that each is inserted in its proper position in the numerical order. 5 1 4 2 gives:
-
-- 5
-- 1 5
-- 1 4 5
-- 1 2 4 5
-
-Remove elements one at a time by picking a random position in the sequence and removing the element there. Positions 1 2 0 0 gives:
-- 1 2 4 5
-- 1 4 5
-- 1 4
-- 4
-
+Generate N random integers, and insert them in a sequence so that each is inserted in its proper position in the numerical order. `5 1 4 2` gives:
+```
+5
+1 5
+1 4 5
+1 2 4 5
+``` 
+Remove elements one at a time by picking a random position in the sequence and removing the element there. Positions `1 2 0 0` gives:
+```
+1 2 4 5
+1 4 5
+1 4
+4
+```
 For which value of N do you think it is better to use a list than a vector as the underlying sequence?
 Write some code to check that. This exercise is as much about writing the benchmark as about its conclusion, so please write it as cleanly as possible.
 
 ## GardenCraft
 You are working on the new GardenCraft, an open world game where you can plant and grow everything necessary to build an environment sheltered from the harsh nature (and rampaging zombies). 
+
+![GardenCraft class diagram](/GardenCraftUML.png)
 
 The main loop of the program looks like the following pseudo-code:
 ```C++
