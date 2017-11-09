@@ -1,3 +1,5 @@
+// In a header
+
 template<class T>
 struct OperationCounter
 {
@@ -31,13 +33,22 @@ struct OperationCounter
 	OperationCounter &operator=(OperationCounter &&) = delete;
 	static void stats()
 	{
-		cout << "Stats" << endl;
-#define SHOW(d) cout << #d << ": " << d << endl
+		std::cout << "Stats" << std::endl;
+#define SHOW(d) std::cout << #d << ": " << d << std::endl
 		SHOW(copies);
 		SHOW(moves);
 		SHOW(creations);
 		SHOW(alives);
 #undef SHOW
-		cout << "-------------------------" << endl;
+		std::cout << "-------------------------" << std::endl;
 	}
 };
+
+
+// In an implementation file
+#define INIT(d) template<class T> int OperationCounter<T>::d = 0;
+INIT(copies);
+INIT(moves);
+INIT(creations);
+INIT(alives);
+#undef INIT
